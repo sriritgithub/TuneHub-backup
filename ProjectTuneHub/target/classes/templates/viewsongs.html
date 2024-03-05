@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+   <table border=1>
+      <thead>
+          <tr>
+             <th>Name</th>
+             <th>Artist</th>
+             <th>Genre</th>
+             <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr th:each="song:${songs}">
+            <td th:text="${song.name}"></td>
+            <td th:text="${song.artist}"></td>
+            <td th:text="${song.genre}"></td>
+            <td th:text="${song.link}"></td>
+            </tr>
+        </tbody>
+      
+   
+   
+   </table>
+
+</body>*/
+<8/html -->
+<!DOCTYPE html>
+ <html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>VIEW SONGS</title>
+ <link rel="stylesheet" type="text/css" th:href="@{viewsongs.css}">
+</head>
+<body>
+
+<h1>Songs List</h1>
+<table border='1'>
+<tr>
+<td>Name</td>
+<td>Artist</td>
+<td>Genre</td>
+<td>Link</td>
+</tr>
+<tr th:each="songs: ${songs}">
+<td th:text="${songs.name}"></td>
+<td th:text="${songs.artist}"></td>
+<td th:text="${songs.genre}"></td>
+
+<td>
+<audio controls><source th:src="${songs.link}" type="audio/mpeg"></audio>
+</td>
+</tr>
+</table>
+</body>
+</html>

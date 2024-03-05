@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ <html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Play lists</title>
+ <link rel="stylesheet" type="text/css" th:href="@{viewsongs.css}">
+</head>
+<body>
+<table border="1">
+<thead>
+     <th>Id</th>
+      <th>Name</th>
+    <tbody>    
+     <td text="${allplaylists}"></td>
+     <td :text="${id}"></td>
+     <td text="${somgs}"></td>
+    </tbody>
+</thead>
+
+</table>
+</body>
+</html>
